@@ -18,9 +18,9 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="min-h-screen pt-32 pb-20 px-4 md:px-8 relative overflow-hidden">
+    <section id="home" className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 md:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Side - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -50,7 +50,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900 dark:text-white"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-gray-900 dark:text-white"
               >
                 Hi, I'm{' '}
                 <span className="bg-gradient-to-r from-primary to-yellow-400 bg-clip-text text-transparent">
@@ -119,7 +119,7 @@ const Hero = () => {
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-                className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl"
+                className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl mx-auto"
               >
                 <img 
                   src="hero-keshav.png" 

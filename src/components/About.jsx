@@ -13,9 +13,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-4 md:px-8 relative" ref={ref}>
+    <section id="about" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 relative" ref={ref}>
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Side - Character with Star Background */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -104,7 +104,7 @@ const About = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
                 About <span className="text-primary">Me</span>
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">

@@ -54,7 +54,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 md:px-8 relative" ref={ref}>
+    <section id="contact" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 relative" ref={ref}>
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -68,7 +68,7 @@ const Contact = () => {
           <p className="text-gray-400 text-lg">Let's work on your next project</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Side - Character Illustration */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}

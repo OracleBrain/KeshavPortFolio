@@ -12,12 +12,12 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 px-4 py-4 md:px-8"
+      className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-4 md:px-6 lg:px-8 py-3 md:py-4"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="glass rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
+        <div className="glass rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between shadow-2xl">
           {/* Logo */}
-          <div className="text-xl font-bold">
+          <div className="text-lg sm:text-xl font-bold">
             Portfolio<span className="text-primary">.</span>
           </div>
 
