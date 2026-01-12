@@ -4,10 +4,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: '🌐', name: 'Website', link: '#' },
-    { icon: '💼', name: 'LinkedIn', link: '#' },
-    { icon: '⚡', name: 'GitHub', link: '#' },
-    { icon: '🎨', name: 'Dribbble', link: '#' },
+    { icon: '📷', name: 'Instagram', link: 'https://www.instagram.com/adhikari_keshavraj/' },
+    { icon: '📘', name: 'Facebook', link: 'https://www.facebook.com/keshav.yadav.946029' },
+    { icon: '💼', name: 'LinkedIn', link: 'https://www.linkedin.com/in/keshavyadav9/' },
+    { icon: '⚡', name: 'GitHub', link: 'https://github.com/KeshavYadav289' },
   ];
 
   return (
