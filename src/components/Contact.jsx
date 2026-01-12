@@ -21,7 +21,7 @@ const Contact = () => {
     setResult('Sending...');
 
     const formDataToSend = new FormData(event.target);
-    formDataToSend.append("access_key", "67499f78-eab3-43d3-8c8a-4de722c78b44");
+    formDataToSend.append("access_key", "5749af78-eab3-43d3-8c0a-4de722c78b44");
     formDataToSend.append("subject", "New Contact Form Submission from Portfolio");
     formDataToSend.append("from_name", "Portfolio Contact Form");
 
