@@ -12,10 +12,38 @@ const Contact = () => {
     message: '',
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
+  const [result, setResult] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setResult('Sending...');
+
+    const formDataToSend = new FormData(event.target);
+    formDataToSend.append("access_key", "67499f78-eab3-43d3-8c8a-4de722c78b44");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Success! Your message has been sent.");
+        setFormData({ name: '', email: '', message: '' });
+        event.target.reset();
+      } else {
+        setResult("Error: " + data.message);
+      }
+    } catch (error) {
+      setResult("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setResult(''), 5000);
+    }
   };
 
   const handleChange = (e) => {
@@ -148,10 +176,24 @@ const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/50"
+                disabled={isSubmitting}
+                className="w-full bg-primary hover:bg-orange-600 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </motion.button>
+
+              {/* Result Message */}
+              {result && (
+                <motion.p
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`text-center text-sm ${
+                    result.includes('Success') ? 'text-green-400' : 'text-red-400'
+                  }`}
+                >
+                  {result}
+                </motion.p>
+              )}
             </form>
           </motion.div>
         </div>
