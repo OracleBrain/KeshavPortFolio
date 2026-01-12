@@ -50,7 +50,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white dark:text-white"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-900 dark:text-white"
               >
                 Hi, I'm{' '}
                 <span className="bg-gradient-to-r from-primary to-yellow-400 bg-clip-text text-transparent">
@@ -61,17 +61,17 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-gray-400 dark:text-gray-400 text-gray-700 text-xl md:text-2xl leading-relaxed max-w-xl font-light"
+                className="text-gray-700 dark:text-gray-400 text-xl md:text-2xl leading-relaxed max-w-xl font-light"
               >
                 Building digital experiences that blend{' '}
-                <span className="text-white dark:text-white text-gray-900 font-medium">creativity</span> with{' '}
-                <span className="text-white dark:text-white text-gray-900 font-medium">code</span>.
+                <span className="text-gray-900 dark:text-white font-medium">creativity</span> with{' '}
+                <span className="text-gray-900 dark:text-white font-medium">code</span>.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="text-gray-500 dark:text-gray-500 text-gray-600 text-base mt-4 max-w-lg"
+                className="text-gray-600 dark:text-gray-500 text-base mt-4 max-w-lg"
               >
                 Full-stack developer & CSE graduate passionate about turning ideas into elegant, 
                 user-centered solutions.
