@@ -22,15 +22,13 @@ const Contact = () => {
 
     const formDataToSend = new FormData(event.target);
     formDataToSend.append("access_key", "67499f78-eab3-43d3-8c8a-4de722c78b44");
+    formDataToSend.append("subject", "New Contact Form Submission from Portfolio");
+    formDataToSend.append("from_name", "Portfolio Contact Form");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify(Object.fromEntries(formDataToSend))
+        body: formDataToSend
       });
 
       const data = await response.json();
