@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   const socialLinks = [
-    { icon: '📷', name: 'Instagram', color: 'from-purple-600 to-pink-500' },
-    { icon: '🎵', name: 'TikTok', color: 'from-black to-cyan-400' },
-    { icon: '⚡', name: 'GitHub', color: 'from-gray-700 to-gray-900' },
-    { icon: '▶️', name: 'YouTube', color: 'from-red-600 to-red-700' },
+    { icon: '📷', name: 'Instagram', color: 'from-purple-600 to-pink-500', link: 'https://www.instagram.com/adhikari_keshavraj/' },
+    { icon: '📘', name: 'Facebook', color: 'from-blue-600 to-blue-700', link: 'https://www.facebook.com/keshav.yadav.946029' },
+    { icon: '💼', name: 'LinkedIn', color: 'from-blue-500 to-blue-600', link: 'https://www.linkedin.com/in/keshavyadav9/' },
+    { icon: '⚡', name: 'GitHub', color: 'from-gray-700 to-gray-900', link: 'https://github.com/KeshavYadav289' },
   ];
 
   const floatingIcons = [
@@ -33,7 +33,9 @@ const Hero = () => {
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.name}
-                  href="#"
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
