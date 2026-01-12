@@ -57,7 +57,7 @@ const About = () => {
                   className="w-80 h-80 md:w-[400px] md:h-[400px] rounded-full overflow-hidden shadow-2xl"
                 >
                   <img 
-                    src="/about-keshav.png" 
+                    src="about-keshav.png" 
                     alt="Keshav Yadav" 
                     className="w-full h-full object-cover"
                   />

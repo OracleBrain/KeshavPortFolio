@@ -122,7 +122,7 @@ const Hero = () => {
                 className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl"
               >
                 <img 
-                  src="/hero-keshav.png" 
+                  src="hero-keshav.png" 
                   alt="Keshav Yadav" 
                   className="w-full h-full object-cover"
                 />

@@ -61,7 +61,7 @@ const Contact = () => {
                 className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl"
               >
                 <img 
-                  src="/contact-keshav.png" 
+                  src="contact-keshav.png" 
                   alt="Keshav Yadav" 
                   className="w-full h-full object-cover"
                 />
