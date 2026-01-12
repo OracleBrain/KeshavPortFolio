@@ -19,14 +19,14 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-gray-400 text-sm"
+            className="text-gray-700 dark:text-gray-400 text-sm"
           >
             <p>
               <a 
                 href="https://www.oraclebrain.com.np" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="font-bold text-white hover:text-primary transition-colors duration-300"
+                className="font-bold text-gray-900 dark:text-white hover:text-primary transition-colors duration-300"
               >
                 Oracle Brain
               </a> © {currentYear} All Rights Reserved

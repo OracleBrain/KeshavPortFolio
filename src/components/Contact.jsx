@@ -135,7 +135,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-6 py-4 glass rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary bg-secondary/50 text-white placeholder-gray-500 transition-all duration-300"
+                  className="w-full px-6 py-4 glass rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary bg-secondary/50 text-gray-900 dark:text-white placeholder-gray-500 transition-all duration-300"
                   placeholder="John Doe"
                   required
                 />
@@ -152,7 +152,7 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-6 py-4 glass rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary bg-secondary/50 text-white placeholder-gray-500 transition-all duration-300"
+                  className="w-full px-6 py-4 glass rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary bg-secondary/50 text-gray-900 dark:text-white placeholder-gray-500 transition-all duration-300"
                   placeholder="john@example.com"
                   required
                 />
@@ -169,7 +169,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows="5"
-                  className="w-full px-6 py-4 glass rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary bg-secondary/50 text-white placeholder-gray-500 resize-none transition-all duration-300"
+                  className="w-full px-6 py-4 glass rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary bg-secondary/50 text-gray-900 dark:text-white placeholder-gray-500 resize-none transition-all duration-300"
                   placeholder="Tell me about your project..."
                   required
                 />
