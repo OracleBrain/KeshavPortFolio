@@ -66,10 +66,10 @@ const Contact = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             Get In <span className="text-primary">Touch</span>
           </h2>
-          <p className="text-gray-400 text-lg">Let's work on your next project</p>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">Let's work on your next project</p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -126,7 +126,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Input */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-2">
                   Your Name
                 </label>
                 <input
@@ -143,7 +143,7 @@ const Contact = () => {
 
               {/* Email Input */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-2">
                   Your Email
                 </label>
                 <input
@@ -160,7 +160,7 @@ const Contact = () => {
 
               {/* Message Input */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-2">
                   Your Message
                 </label>
                 <textarea

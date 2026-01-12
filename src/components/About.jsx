@@ -104,17 +104,17 @@ const About = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-900 dark:text-white">
                 About <span className="text-primary">Me</span>
               </h2>
-              <p className="text-gray-400 text-lg leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-400 text-lg leading-relaxed">
                 I'm a passionate Computer Science Engineer who transforms ideas into elegant digital solutions. 
                 With a strong foundation in CSE, I've developed a deep love for creating web experiences that 
                 are not just functional, but beautiful and intuitive. My journey began with curiosity about how 
                 things work on the internet, and it's evolved into a full-blown passion for building applications 
                 that make a real difference in people's lives.
               </p>
-              <p className="text-gray-400 text-lg leading-relaxed mt-4">
+              <p className="text-gray-700 dark:text-gray-400 text-lg leading-relaxed mt-4">
                 Whether it's crafting responsive user interfaces, architecting scalable backends, or diving into 
                 the latest technologies, I thrive on challenges that push my boundaries. I believe great software 
                 is built at the intersection of clean code, thoughtful design, and genuine empathy for users.
@@ -134,7 +134,7 @@ const About = () => {
                   <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-gray-400">{stat.label}</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
                 </motion.div>
               ))}
             </div>

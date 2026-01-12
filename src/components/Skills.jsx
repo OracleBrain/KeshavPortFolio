@@ -74,10 +74,10 @@ const Skills = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             My <span className="text-primary">Skills</span>
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
             Technologies and tools I work with to create amazing web experiences
           </p>
         </motion.div>
@@ -98,12 +98,12 @@ const Skills = () => {
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${skill.color} flex items-center justify-center text-2xl shadow-lg`}>
                   {skill.icon}
                 </div>
-                <h3 className="text-lg font-semibold">{skill.name}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{skill.name}</h3>
               </div>
 
               {/* Proficiency Label */}
               <div className="flex justify-between items-center mb-2">
-                <span className="text-sm text-gray-400">Proficiency</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">Proficiency</span>
                 <span className="text-sm font-bold text-primary">{skill.proficiency}%</span>
               </div>
 

@@ -66,10 +66,10 @@ const Projects = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             My <span className="text-primary">Projects</span>
           </h2>
-          <p className="text-gray-400 text-lg">A showcase of my recent work</p>
+          <p className="text-gray-600 dark:text-gray-400 text-lg">A showcase of my recent work</p>
         </motion.div>
 
         {/* Projects Grid */}
@@ -106,8 +106,8 @@ const Projects = () => {
 
               {/* Project Details */}
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-400 text-sm mb-4">{project.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{project.description}</p>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
