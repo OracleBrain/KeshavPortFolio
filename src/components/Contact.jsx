@@ -26,7 +26,11 @@ const Contact = () => {
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formDataToSend
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(Object.fromEntries(formDataToSend))
       });
 
       const data = await response.json();
@@ -36,9 +40,11 @@ const Contact = () => {
         setFormData({ name: '', email: '', message: '' });
         event.target.reset();
       } else {
-        setResult("Error: " + data.message);
+        console.error("Submission error:", data);
+        setResult("Error: " + (data.message || "Failed to send message"));
       }
     } catch (error) {
+      console.error("Network error:", error);
       setResult("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
