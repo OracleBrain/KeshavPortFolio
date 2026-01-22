@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
+import { FaInstagram, FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 const Hero = () => {
   const socialLinks = [
-    { icon: '📷', name: 'Instagram', color: 'from-purple-600 to-pink-500', link: 'https://www.instagram.com/adhikari_keshavraj/' },
-    { icon: '📘', name: 'Facebook', color: 'from-blue-600 to-blue-700', link: 'https://www.facebook.com/keshav.yadav.946029' },
-    { icon: '💼', name: 'LinkedIn', color: 'from-blue-500 to-blue-600', link: 'https://www.linkedin.com/in/keshavyadav9/' },
-    { icon: '⚡', name: 'GitHub', color: 'from-gray-700 to-gray-900', link: 'https://github.com/KeshavYadav289' },
+    { icon: FaInstagram, name: 'Instagram', color: 'from-purple-600 to-pink-500', link: 'https://www.instagram.com/adhikari_keshavraj/' },
+    { icon: FaFacebookF, name: 'Facebook', color: 'from-blue-600 to-blue-700', link: 'https://www.facebook.com/keshav.yadav.946029' },
+    { icon: FaLinkedinIn, name: 'LinkedIn', color: 'from-blue-500 to-blue-600', link: 'https://www.linkedin.com/in/keshavyadav9/' },
+    { icon: FaGithub, name: 'GitHub', color: 'from-gray-700 to-gray-900', link: 'https://github.com/KeshavYadav289' },
   ];
 
   const floatingIcons = [
@@ -19,40 +20,48 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 md:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto overflow-x-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Side - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8 w-full"
           >
             {/* Social Icons */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.name}
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`w-12 h-12 rounded-xl bg-gradient-to-br ${social.color} flex items-center justify-center text-2xl hover:scale-110 transition-transform shadow-lg`}
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
+            <div className="flex space-x-3 sm:space-x-4 justify-start">
+              {socialLinks.map((social, index) => {
+                const IconComponent = social.icon;
+                return (
+                  <motion.a
+                    key={social.name}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${social.color} flex items-center justify-center text-white hover:shadow-2xl transition-all duration-300 shadow-lg flex-shrink-0`}
+                    style={{
+                      boxShadow: '0 10px 25px -5px rgba(0,0,0,0.3), 0 4px 6px -2px rgba(0,0,0,0.1)',
+                    }}
+                  >
+                    <IconComponent className="text-lg sm:text-xl" />
+                  </motion.a>
+                );
+              })}
             </div>
 
             {/* Heading */}
-            <div>
+            <div className="w-full">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-gray-900 dark:text-white whitespace-nowrap"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 text-gray-900 dark:text-white break-words"
               >
                 Hi, I'm <span className="bg-gradient-to-r from-primary to-yellow-400 bg-clip-text text-transparent">Keshav Yadav</span>
               </motion.h1>
@@ -60,7 +69,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-gray-700 dark:text-gray-400 text-xl md:text-2xl leading-relaxed max-w-xl font-light"
+                className="text-gray-700 dark:text-gray-400 text-lg sm:text-xl md:text-2xl leading-relaxed max-w-xl font-light"
               >
                 Building digital experiences that blend{' '}
                 <span className="text-gray-900 dark:text-white font-medium">creativity</span> with{' '}
@@ -82,9 +91,9 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-3 sm:gap-4 w-full"
             >
-              <button className="bg-primary hover:bg-orange-600 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/50 flex items-center space-x-2">
+              <button className="bg-primary hover:bg-orange-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/50 flex items-center space-x-2 text-sm sm:text-base">
                 <span>📥</span>
                 <span>Download CV</span>
               </button>
@@ -92,7 +101,7 @@ const Hero = () => {
                 href="https://wa.me/9779804803464"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-primary text-white hover:bg-primary/10 px-8 py-3 rounded-full font-medium transition-all duration-300 flex items-center space-x-2"
+                className="border-2 border-primary text-white hover:bg-primary/10 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium transition-all duration-300 flex items-center space-x-2 text-sm sm:text-base"
               >
                 <span>✉️</span>
                 <span>Contact Me</span>
